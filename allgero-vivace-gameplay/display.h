@@ -37,11 +37,12 @@ void Display::Disp_Init(int widthDisplay, int heightDisplay, int bufferWidth, in
      throw 2;
    }
  }
-   catch(int error)
-   {
-     std::cout << error << "\n";
-   }
+ catch(int error)
+ {
+   std::cout << error << "\n";
  }
+ 
+}
 
 
 void Display::Disp_Deinit()
