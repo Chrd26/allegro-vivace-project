@@ -1,3 +1,4 @@
+#include <allegro5/allegro5.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_acodec.h>
 
@@ -11,8 +12,7 @@ class AudioManager
     ALLEGRO_SAMPLE *sample_explode[2];
     
   public:
-
-    void Audio_Init();
+void Audio_Init();
     void Audio_Deinit();
 };
 
@@ -22,11 +22,11 @@ void AudioManager::Audio_Init()
   al_init_acodec_addon();
   al_reserve_samples(128);
 
-  sample_shot = al_load_sample("shot.flac");
+  sample_shot = al_load_sample("/sound-effects/shot.flac");
 
-  sample_explode[0] = al_load_sample("explode1.flac");
+  sample_explode[0] = al_load_sample("/sound-effects/explode1.flac");
 
-  sample_explode[1] = al_load_sample("explode2.flac");
+  sample_explode[1] = al_load_sample("/sound-effects/explode2.flac");
 
 }
 
