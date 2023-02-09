@@ -6,18 +6,18 @@ class AudioManager
 {
 
   //Declare variables and create 1 audio initialization and 1 audio deinitializaiton
-  //functions
-  private:
+  // & functions
+  public:
     ALLEGRO_SAMPLE *sample_shot;
     ALLEGRO_SAMPLE *sample_explode[2];
-    
-  public:
-void Audio_Init();
+    void Audio_Init();
     void Audio_Deinit();
+
 };
 
 void AudioManager::Audio_Init()
 {
+
   al_install_audio();
   al_init_acodec_addon();
   al_reserve_samples(128);

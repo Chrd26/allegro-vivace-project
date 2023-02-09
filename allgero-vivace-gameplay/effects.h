@@ -16,7 +16,6 @@ class EffectsManager
 {
   public:
 
-    ALLEGRO_SAMPLE *explosion;
     void fx_init();
     void fx_add(bool spark, int x, int y);
 }
@@ -33,10 +32,9 @@ void EffectsManager::fx_init()
 //Spawning Effects
 void EffectsManager::fx_add(bool spark, int x, int y)
   {
+    AudioManager audio;
     if (!spark)
     {
-      explosion = al_load_sample("sound-effects");
-      al_play_sample(explosion, 0.75, 0, 1, ALLEGRO_PLAYMODE_ONCE, NULL);
     }
 
     for (int i = 0; i < FX_N; i++)

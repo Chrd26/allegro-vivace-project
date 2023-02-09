@@ -1,9 +1,9 @@
 #include <allegro5/allegro_font.h>
 #include <allegro5/allegro_primitives.h>
 
-#include "display.h"
-#include "sprites.h"
 #include "sound.h"
+#include "sprites.h"
+#include "GameManager.h"
 
 //Define 
 #define BUFFER_W 320

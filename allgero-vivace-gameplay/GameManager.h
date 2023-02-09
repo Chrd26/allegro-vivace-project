@@ -1,6 +1,5 @@
-#include <iostream>
 #include <allegro5/allegro5.h>
-#include <allegro5/allegro_image.h>
+#include <sprites.h>
 
 class Display
 {
@@ -18,6 +17,12 @@ class Display
 
 
 };
+
+class GameManager
+{
+  public:
+    void must_init(bool test, const char *description);
+}
 
 void Display::Disp_Init(int widthDisplay, int heightDisplay, int bufferWidth, int bufferHeight)
 {
@@ -64,3 +69,10 @@ void Display::Disp_PostDraw(int bufferWidth, int bufferHeight, int widthDisplay,
     al_flip_display();
 }
 
+void GameManager::must_init(bool test, const char *description)
+{
+  if (test) return;
+
+  cout << "Couldn't initialize: "  << description << "'n";
+  exit(1);
+}
